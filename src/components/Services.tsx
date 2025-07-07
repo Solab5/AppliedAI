@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, ChevronUp, Map, Zap, Settings, GraduationCap, Users2, ArrowRight } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { Map, Zap, Settings, GraduationCap, Users2 } from 'lucide-react';
 
 const Services = () => {
-  const [expandedService, setExpandedService] = useState<number | null>(null);
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -99,84 +97,49 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" ref={sectionRef} className="py-24 bg-white dots-pattern-subtle relative">
+      <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
-            OUR SERVICES
+            Our Services
           </h2>
-          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-2xl mx-auto">
             We partner with you to solve real business pain, not just deliver code. Our outcome-driven approach means you get measurable results, with engagement options from targeted solutions to full accountability.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="service-card opacity-0 transform translate-y-8 bg-brand-blue/5 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-brand-blue/10 hover:border-brand-orange/30"
-              onMouseEnter={() => setHoveredService(index)}
-              onMouseLeave={() => setHoveredService(null)}
-            >
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center transform transition-all duration-300 ${
-                    hoveredService === index ? 'scale-110 rotate-3' : ''
-                  }`}>
-                    <service.icon className="w-6 h-6 text-white" />
+        {/* Vertical Timeline */}
+        <div className="relative flex flex-col items-center">
+          {/* Timeline line */}
+          <div className="absolute left-6 sm:left-1/2 transform sm:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-brand-orange via-brand-blue to-brand-orange opacity-30 z-0" style={{ minHeight: '100%' }} />
+
+          <div className="w-full flex flex-col gap-16 z-10">
+            {services.map((service, idx) => (
+              <div key={idx} className="relative w-full flex flex-col sm:flex-row items-center sm:items-stretch group">
+                {/* Timeline dot/icon */}
+                <div className="flex flex-col items-center sm:items-start sm:justify-center sm:w-32 flex-shrink-0">
+                  <div className="z-10 mb-4 sm:mb-0 sm:mt-0 mt-2">
+                    <div className={`w-10 h-10 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center shadow-md mx-auto`}>
+                      <service.icon className="w-6 h-6 text-brand-orange" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-oswald font-semibold text-brand-brown group-hover:text-brand-orange transition-colors uppercase tracking-wide">
+                </div>
+                {/* Card */}
+                <div className="w-full max-w-xl mx-auto bg-white border border-gray-100 rounded-xl shadow-sm px-4 py-8 sm:px-8 flex flex-col gap-2 transition-all duration-300 hover:border-brand-orange/60 hover:shadow-lg text-center sm:text-left">
+                  <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide flex items-center gap-2 justify-center sm:justify-start">
                     {service.title}
                   </h3>
+                  <p className="font-roboto-flex text-base text-slate-600 leading-relaxed mb-2">{service.summary}</p>
+                  {service.details && (
+                    <ul className="list-disc list-inside text-sm text-brand-brown/80 mt-2 space-y-1 text-left mx-auto sm:mx-0">
+                      {service.details.map((detail, detailIdx) => (
+                        <li key={detailIdx}>{detail}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <button
-                  onClick={() => setExpandedService(expandedService === index ? null : index)}
-                  className="text-brand-brown/60 hover:text-brand-orange transition-all duration-300 transform hover:scale-110"
-                >
-                  {expandedService === index ? <ChevronUp /> : <ChevronDown />}
-                </button>
               </div>
-              
-              <p className="font-roboto-flex text-brand-brown/70 mb-4 leading-relaxed group-hover:text-brand-brown transition-colors">
-                {service.summary}
-              </p>
-              
-              {expandedService === index && (
-                <div className="mt-6 pt-6 border-t border-brand-blue/20 animate-fade-in">
-                  <ul className="space-y-3">
-                    {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start gap-3 group/item">
-                        <div className="w-2 h-2 bg-brand-orange rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform"></div>
-                        <span className="font-roboto-flex text-brand-brown/80 group-hover/item:text-brand-brown transition-colors">
-                          {detail}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-6 pt-4 border-t border-brand-blue/10">
-                    <button className="inline-flex items-center gap-2 text-brand-orange hover:text-brand-blue font-oswald font-medium transition-colors group/cta uppercase tracking-wide">
-                      LEARN MORE
-                      <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl p-8 text-white shadow-xl">
-            <h3 className="text-2xl font-oswald font-bold mb-4 uppercase tracking-wide">
-              READY TO TRANSFORM YOUR BUSINESS?
-            </h3>
-            <p className="font-roboto-flex text-base mb-6 opacity-90">
-              Let's discuss how our services can drive real value for your organization.
-            </p>
-            <button className="bg-white text-brand-brown font-oswald font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 uppercase tracking-wide text-sm md:text-base">
-              START YOUR AI JOURNEY
-            </button>
+            ))}
           </div>
         </div>
       </div>
