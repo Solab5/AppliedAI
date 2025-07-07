@@ -116,8 +116,8 @@ const Services = () => {
           <div className="w-full flex flex-col gap-16 z-10">
             {services.map((service, idx) => (
               <div key={idx} className="relative w-full flex flex-col sm:flex-row items-center sm:items-stretch group">
-                {/* Timeline dot/icon */}
-                <div className="flex flex-col items-center sm:items-start sm:justify-center sm:w-32 flex-shrink-0">
+                {/* Timeline dot/icon: only show on sm and above */}
+                <div className="hidden sm:flex flex-col items-center sm:items-start sm:justify-center sm:w-32 flex-shrink-0">
                   <div className="z-10 mb-4 sm:mb-0 sm:mt-0 mt-2">
                     <div className={`w-10 h-10 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center shadow-md mx-auto`}>
                       <service.icon className="w-6 h-6 text-brand-orange" />
