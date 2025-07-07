@@ -9,22 +9,6 @@ const Contact = () => {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', company: '', message: '' });
-    setIsSubmitting(false);
-    
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -55,7 +39,7 @@ const Contact = () => {
               LET'S START WITH A 30-MINUTE DISCOVERY CALL
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://formspree.io/f/xqabvkrn" method="POST" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-oswald font-medium text-brand-brown mb-2 uppercase tracking-wide">
@@ -123,20 +107,10 @@ const Contact = () => {
               
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-oswald font-semibold py-4 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 uppercase tracking-wide"
+                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-oswald font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 uppercase tracking-wide"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    SENDING...
-                  </>
-                ) : (
-                  <>
-                    <Send size={20} />
-                    SEND MESSAGE
-                  </>
-                )}
+                <Send size={20} />
+                SEND MESSAGE
               </button>
             </form>
           </div>
