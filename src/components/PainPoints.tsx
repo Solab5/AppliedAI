@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { AlertTriangle, Target, Database, Users, Lightbulb, Shield } from 'lucide-react';
 
 const PainPoints = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,71 +74,58 @@ const PainPoints = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="py-24 bg-white dots-pattern-subtle relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
-            WHY AI/ML{' '}
-            <span className="text-red-600 relative">
-              FAILS
-              <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 100 12" fill="none">
-                <path d="M2 10C20 2 40 2 60 6C80 10 90 4 98 6" stroke="#dc2626" strokeWidth="2" fill="none" className="animate-pulse"/>
-              </svg>
-            </span>{' '}
-            TODAY
+            Why AI/ML Initiatives Fail
           </h2>
-          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
-            Most organizations struggle with the same predictable challenges when implementing AI solutions. We've helped clients overcome these exact pains with proven, outcome-focused strategies.
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-2xl mx-auto">
+            Most organizations face the same critical challenges. We help you overcome them with proven, outcome-focused strategies.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {painPoints.map((point, index) => (
-            <div
-              key={index}
-              className="pain-card opacity-0 transform translate-y-8 bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer border-l-4 border-red-500"
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div className={`flex items-center justify-center w-16 h-16 bg-red-100 rounded-full group-hover:bg-red-200 transition-all duration-300 ${
-                  hoveredCard === index ? 'scale-110 rotate-6' : ''
-                }`}>
-                  <point.icon className="w-8 h-8 text-red-600" />
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-oswald font-bold text-red-600 group-hover:scale-110 transition-transform uppercase">
-                    {point.stat}
+        {/* Vertical Timeline */}
+        <div className="relative flex flex-col items-center">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-brand-orange via-brand-blue to-brand-orange opacity-30 z-0" style={{ minHeight: '100%' }} />
+
+          <div className="w-full flex flex-col gap-16 z-10">
+            {painPoints.map((point, idx) => (
+              <div key={idx} className="relative w-full flex flex-col sm:flex-row items-center sm:items-stretch group">
+                {/* Timeline dot/icon: only show on sm and above */}
+                <div className="hidden sm:flex flex-col items-center sm:items-start sm:justify-center sm:w-32 flex-shrink-0">
+                  <div className="z-10 mb-4 sm:mb-0 sm:mt-0 mt-2">
+                    <div className="w-10 h-10 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center shadow-md mx-auto">
+                      <point.icon className="w-6 h-6 text-brand-orange" />
+                    </div>
                   </div>
-                  <div className="text-xs font-roboto-condensed font-light text-slate-500 uppercase">{point.statLabel}</div>
+                </div>
+                {/* Card */}
+                <div className="w-full max-w-xl mx-auto bg-white border border-gray-100 rounded-xl shadow-sm px-4 py-8 sm:px-8 flex flex-col gap-2 transition-all duration-300 hover:border-brand-orange/60 hover:shadow-lg text-center sm:text-left">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-4 mb-2">
+                    <span className="text-2xl font-oswald font-bold text-brand-orange">{point.stat}</span>
+                    <span className="text-xs font-roboto-condensed font-light text-slate-500 uppercase tracking-wide">{point.statLabel}</span>
+                  </div>
+                  <h3 className="text-lg font-oswald font-semibold text-brand-brown mb-1 uppercase tracking-wide">{point.title}</h3>
+                  <p className="font-roboto-flex text-base text-slate-600 leading-relaxed">{point.description}</p>
                 </div>
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-4 group-hover:text-red-600 transition-colors uppercase tracking-wide">
-                {point.title}
-              </h3>
-              <p className="font-roboto-flex text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
-                {point.description}
-              </p>
-              
-              {/* Hover effect overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 rounded-2xl transition-opacity duration-300 ${
-                hoveredCard === index ? 'opacity-100' : 'opacity-0'
-              }`}></div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="inline-block bg-white rounded-2xl p-8 shadow-lg border-2 border-brand-orange/20">
-            <h3 className="text-2xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
-              SOUND FAMILIAR?
+        <div className="text-center mt-20">
+          <div className="inline-block bg-gradient-to-r from-brand-orange via-brand-blue to-brand-orange rounded-2xl p-10 shadow-xl border-0">
+            <h3 className="text-2xl md:text-3xl font-oswald font-bold text-white mb-4 uppercase tracking-wide drop-shadow">
+              Sound Familiar?
             </h3>
-            <p className="font-roboto-flex text-base text-brand-brown/80 mb-6">
-              We've helped hundreds of organizations overcome these exact challenges.
+            <p className="font-roboto-flex text-lg text-white/90 mb-8 max-w-xl mx-auto">
+              We've helped hundreds of organizations overcome these exact challenges. Let's make your AI/ML initiative a success.
             </p>
-            <button className="bg-brand-orange hover:bg-brand-orange/90 text-brand-brown font-oswald font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg uppercase tracking-wide">
-              LET'S FIX THIS TOGETHER
+            <button className="bg-white/90 hover:bg-white text-brand-brown font-oswald font-semibold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg uppercase tracking-wide text-base md:text-lg shadow-md">
+              Let's Fix This Together
             </button>
           </div>
         </div>
