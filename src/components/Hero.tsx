@@ -50,7 +50,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-8 md:mt-0">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-oswald font-bold text-white mb-4 md:mb-6 leading-tight opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.2s_forwards] uppercase tracking-wide">
-          APPLIED AI/ML THAT WORKS IN{' '}
+          APPLIED AI/ML THAT DELIVERS BUSINESS OUTCOMES IN
           <span className="text-brand-orange relative block mt-1 md:mt-2">
             <span className="typewriter-container">
               {typewriterText}
@@ -60,11 +60,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl font-roboto-flex text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.4s_forwards] px-2">
-          We deliver{' '}
-          <span className="text-brand-blue font-semibold hover:text-brand-orange transition-colors cursor-default">
-            results-driven AI solutions
-          </span>{' '}
-          that integrate into your workflow—not just models.
+          We help organizations solve their most pressing AI challenges—reducing costly errors, accelerating adoption, and driving measurable business value. If you're losing customers to unreliable AI or struggling to scale, we deliver outcomes, not just models.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.6s_forwards] px-4">

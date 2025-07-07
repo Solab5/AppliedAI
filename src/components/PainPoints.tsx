@@ -89,11 +89,7 @@ const PainPoints = () => {
             TODAY
           </h2>
           <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
-            Most organizations struggle with the same{' '}
-            <span className="text-red-600 font-semibold hover:text-red-700 transition-colors cursor-default">
-              predictable challenges
-            </span>{' '}
-            when implementing AI solutions.
+            Most organizations struggle with the same predictable challenges when implementing AI solutions. We've helped clients overcome these exact pains with proven, outcome-focused strategies.
           </p>
         </div>
 

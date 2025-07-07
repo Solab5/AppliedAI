@@ -104,11 +104,7 @@ const CaseStudies = () => {
             CASE STUDIES
           </h2>
           <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto mb-8">
-            Real-world{' '}
-            <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
-              success stories
-            </span>{' '}
-            demonstrating the impact of our AI/ML solutions.
+            Real-world success stories demonstrating the impact of our AI/ML solutions. We regularly share actionable insights and best practices to help organizations succeed with AI.
           </p>
           
           {/* Filter Buttons */}

@@ -106,11 +106,7 @@ const Services = () => {
             OUR SERVICES
           </h2>
           <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
-            Comprehensive AI/ML solutions designed to deliver{' '}
-            <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
-              real business value
-            </span>
-            .
+            We partner with you to solve real business pain, not just deliver code. Our outcome-driven approach means you get measurable results, with engagement options from targeted solutions to full accountability.
           </p>
         </div>
 

@@ -24,11 +24,7 @@ const Contact = () => {
             LET'S START YOUR AI JOURNEY
           </h2>
           <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
-            Ready to{' '}
-            <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
-              transform your business
-            </span>{' '}
-            with AI? Let's discuss your challenges and opportunities.
+            Ready to transform your business with AI? In our discovery call, we'll ask the right questions to uncover your real goals, success criteria, and the value we can deliver together.
           </p>
         </div>
 
