@@ -49,7 +49,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-8 md:mt-0">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-oswald font-bold text-white mb-4 md:mb-6 leading-tight opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.2s_forwards] uppercase tracking-wide">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-oswald font-bold text-white mb-4 md:mb-6 leading-tight opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.2s_forwards] uppercase tracking-wide">
           APPLIED AI/ML THAT WORKS IN{' '}
           <span className="text-brand-orange relative block mt-1 md:mt-2">
             <span className="typewriter-container">
@@ -59,7 +59,7 @@ const Hero = () => {
           </span>
         </h1>
         
-        <p className="text-lg sm:text-xl md:text-2xl font-roboto-flex text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.4s_forwards] px-2">
+        <p className="text-base sm:text-lg md:text-xl font-roboto-flex text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.4s_forwards] px-2">
           We deliver{' '}
           <span className="text-brand-blue font-semibold hover:text-brand-orange transition-colors cursor-default">
             results-driven AI solutions
@@ -82,19 +82,19 @@ const Hero = () => {
         {/* Interactive Stats */}
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.8s_forwards] px-4">
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
               <span className="counter" data-target="500">500</span>+
             </div>
             <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">PROJECTS DELIVERED</div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-oswald font-bold text-brand-blue mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-blue mb-2 group-hover:scale-110 transition-transform uppercase">
               <span className="counter" data-target="95">95</span>%
             </div>
             <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">SUCCESS RATE</div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
               $<span className="counter" data-target="50">50</span>M+
             </div>
             <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">VALUE GENERATED</div>

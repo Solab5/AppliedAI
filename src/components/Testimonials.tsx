@@ -57,10 +57,10 @@ const Testimonials = () => {
     <section className="py-20 bg-brand-brown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-white mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-white mb-4 uppercase tracking-wide">
             WHAT OUR CLIENTS SAY
           </h2>
-          <p className="text-xl font-roboto-flex text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-gray-300 max-w-3xl mx-auto">
             Trusted by{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               industry leaders
@@ -95,13 +95,13 @@ const Testimonials = () => {
                 className="w-16 h-16 rounded-full object-cover border-2 border-brand-orange"
               />
               <div className="text-center">
-                <div className="font-oswald font-semibold text-brand-brown text-lg uppercase tracking-wide">
+                <div className="font-oswald font-semibold text-brand-brown text-xl uppercase tracking-wide">
                   {testimonials[currentTestimonial].name}
                 </div>
-                <div className="font-roboto-flex text-brand-brown/70">
+                <div className="font-roboto-flex text-base text-brand-brown/70">
                   {testimonials[currentTestimonial].role}
                 </div>
-                <div className="font-roboto-condensed font-light text-brand-brown/60 text-sm uppercase">
+                <div className="font-roboto-condensed font-light text-brand-brown/60 text-xs uppercase">
                   {testimonials[currentTestimonial].company}
                 </div>
               </div>

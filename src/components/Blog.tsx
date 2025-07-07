@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useNavigate } from 'react-router-dom';
 import firstPost from '../blog/first-post.md?raw';
 
 const posts = [
@@ -17,6 +18,7 @@ const posts = [
 
 const Blog: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const post = posts.find(p => p.slug === selectedPost);
 
@@ -26,6 +28,14 @@ const Blog: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-oswald font-bold text-brand-brown mb-10 uppercase tracking-wide text-center">
           Blog
         </h2>
+        <div className="mb-8 flex justify-center">
+          <button
+            className="text-brand-orange hover:underline font-semibold px-4 py-2 rounded-full border border-brand-orange bg-white hover:bg-brand-orange/10 transition"
+            onClick={() => navigate('/')}
+          >
+            ← Back to Home
+          </button>
+        </div>
         {selectedPost && post ? (
           <article className="prose lg:prose-xl max-w-none mx-auto">
             <button

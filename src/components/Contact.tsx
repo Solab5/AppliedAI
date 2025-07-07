@@ -20,10 +20,10 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white dots-pattern-subtle relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
             LET'S START YOUR AI JOURNEY
           </h2>
-          <p className="text-xl font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
             Ready to{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               transform your business
@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
-            <h3 className="text-2xl font-oswald font-semibold text-brand-brown mb-6 uppercase tracking-wide">
+            <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-6 uppercase tracking-wide">
               LET'S START WITH A 30-MINUTE DISCOVERY CALL
             </h3>
             
@@ -52,7 +52,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex"
+                    className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex text-base"
                     placeholder="Your name"
                   />
                 </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex"
+                    className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex text-base"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex"
+                  className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex text-base"
                   placeholder="Your company name"
                 />
               </div>
@@ -100,14 +100,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex"
+                  className="w-full px-4 py-3 border border-brand-blue/30 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors font-roboto-flex text-base"
                   placeholder="Describe your current challenges, goals, or specific use cases you'd like to explore..."
                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-oswald font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 uppercase tracking-wide"
+                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-oswald font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 uppercase tracking-wide text-sm md:text-base"
               >
                 <Send size={20} />
                 SEND MESSAGE
@@ -118,7 +118,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-brand-blue/20">
-              <h3 className="text-2xl font-oswald font-semibold text-brand-brown mb-6 uppercase tracking-wide">
+              <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-6 uppercase tracking-wide">
                 GET IN TOUCH
               </h3>
               
@@ -128,8 +128,8 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide">EMAIL</p>
-                    <p className="font-roboto-flex text-brand-brown/70">risolab2025@gmail.com
+                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide text-sm">EMAIL</p>
+                    <p className="font-roboto-flex text-brand-brown/70 text-base">risolab2025@gmail.com
 </p>
                   </div>
                 </div>
@@ -139,8 +139,8 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-brand-blue" />
                   </div>
                   <div>
-                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide">PHONE</p>
-                    <p className="font-roboto-flex text-brand-brown/70">+256 7777 54234</p>
+                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide text-sm">PHONE</p>
+                    <p className="font-roboto-flex text-brand-brown/70 text-base">+256 7777 54234</p>
                   </div>
                 </div>
                 
@@ -149,8 +149,8 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide">LOCATION</p>
-                    <p className="font-roboto-flex text-brand-brown/70">Kampala, Uganda</p>
+                    <p className="font-oswald font-medium text-brand-brown uppercase tracking-wide text-sm">LOCATION</p>
+                    <p className="font-roboto-flex text-brand-brown/70 text-base">Kampala, Uganda</p>
                   </div>
                 </div>
               </div>

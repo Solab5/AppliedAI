@@ -78,7 +78,7 @@ const PainPoints = () => {
     <section ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
             WHY AI/ML{' '}
             <span className="text-red-600 relative">
               FAILS
@@ -88,7 +88,7 @@ const PainPoints = () => {
             </span>{' '}
             TODAY
           </h2>
-          <p className="text-xl font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
             Most organizations struggle with the same{' '}
             <span className="text-red-600 font-semibold hover:text-red-700 transition-colors cursor-default">
               predictable challenges
@@ -121,7 +121,7 @@ const PainPoints = () => {
               <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-4 group-hover:text-red-600 transition-colors uppercase tracking-wide">
                 {point.title}
               </h3>
-              <p className="font-roboto-flex text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+              <p className="font-roboto-flex text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                 {point.description}
               </p>
               
@@ -139,7 +139,7 @@ const PainPoints = () => {
             <h3 className="text-2xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
               SOUND FAMILIAR?
             </h3>
-            <p className="font-roboto-flex text-brand-brown/80 mb-6">
+            <p className="font-roboto-flex text-base text-brand-brown/80 mb-6">
               We've helped hundreds of organizations overcome these exact challenges.
             </p>
             <button className="bg-brand-orange hover:bg-brand-orange/90 text-brand-brown font-oswald font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg uppercase tracking-wide">

@@ -62,20 +62,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-brand-brown/40 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-roboto-flex text-gray-400 text-center md:text-left">
-              © 2025 AppliedAI. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Terms of Service</a>
-              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-
         {/* Trust Badges */}
         <div className="mt-8 pt-8 border-t border-brand-brown/40">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
@@ -94,6 +80,20 @@ const Footer = () => {
             <div>
               <div className="text-2xl font-oswald font-bold text-brand-blue mb-1 uppercase">24/7</div>
               <div className="font-roboto-condensed font-light text-gray-400 text-sm uppercase">SUPPORT</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-brand-brown/40 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="font-roboto-flex text-gray-400 text-center md:text-left">
+              © 2025 AppliedAI. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Privacy Policy</a>
+              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Terms of Service</a>
+              <a href="#" className="font-roboto-flex text-gray-400 hover:text-brand-orange transition-colors text-sm">Cookie Policy</a>
             </div>
           </div>
         </div>

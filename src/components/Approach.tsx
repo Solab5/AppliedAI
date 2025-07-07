@@ -59,10 +59,10 @@ const Approach = () => {
     <section id="approach" ref={sectionRef} className="py-20 bg-brand-brown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-white mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-white mb-4 uppercase tracking-wide">
             OUR APPROACH
           </h2>
-          <p className="text-xl font-roboto-flex text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-base md:text-lg font-roboto-flex text-gray-300 max-w-3xl mx-auto mb-8">
             We don't just build models. We create{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               business outcomes
@@ -70,7 +70,7 @@ const Approach = () => {
             through a proven methodology.
           </p>
           <div className="bg-gradient-to-r from-brand-orange to-brand-blue text-brand-brown px-8 py-4 rounded-lg inline-block shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <p className="text-lg font-oswald font-semibold italic uppercase tracking-wide">
+            <p className="text-base font-oswald font-semibold italic uppercase tracking-wide">
               "WE DON'T JUST BUILD MODELS. WE CREATE BUSINESS OUTCOMES."
             </p>
           </div>
@@ -93,7 +93,7 @@ const Approach = () => {
               <h3 className="text-xl font-oswald font-semibold text-white mb-4 group-hover:text-brand-orange transition-colors uppercase tracking-wide">
                 {step.title}
               </h3>
-              <p className="font-roboto-flex text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+              <p className="font-roboto-flex text-base text-gray-300 leading-relaxed group-hover:text-white transition-colors">
                 {step.description}
               </p>
             </div>
@@ -108,7 +108,7 @@ const Approach = () => {
               <h3 className="text-2xl font-oswald font-bold text-brand-orange mb-4 text-center uppercase tracking-wide">
                 PROVEN METHODOLOGY
               </h3>
-              <p className="font-roboto-flex text-gray-300 text-center max-w-2xl">
+              <p className="font-roboto-flex text-base text-gray-300 text-center max-w-2xl">
                 Our systematic approach has delivered success across{' '}
                 <span className="text-brand-blue font-semibold">500+ projects</span>{' '}
                 in diverse industries and organizational contexts.

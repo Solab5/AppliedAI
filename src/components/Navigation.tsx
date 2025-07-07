@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Brain } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,25 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'Services', href: '#services' },
     { label: 'Approach', href: '#approach' },
     { label: 'Case Studies', href: '#case-studies' },
     { label: 'Contact', href: '#contact' },
     { label: 'Blog', href: '/blog' },
   ];
+
+  // Determine active nav item based on location
+  const getActiveIndex = () => {
+    if (location.pathname === '/blog') return navItems.findIndex(i => i.href === '/blog');
+    if (location.pathname === '/' && location.hash) {
+      const idx = navItems.findIndex(i => i.href === location.hash);
+      return idx !== -1 ? idx : 0;
+    }
+    if (location.pathname === '/') return 0; // Home
+    return -1;
+  };
+  const activeIndex = getActiveIndex();
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 flex justify-between items-center px-4 sm:px-8 py-3 sm:py-4 bg-transparent ${
@@ -39,7 +53,6 @@ const Navigation = () => {
           <a
             key={item.label}
             href={item.href}
-            onClick={() => setActiveIndex(idx)}
             className={`px-5 py-2 font-roboto-flex text-gray-800 font-medium transition rounded-full cursor-pointer 
               ${activeIndex === idx ? 'bg-blue-100 text-blue-600' : 'hover:bg-gray-100 hover:text-brand-orange'}`}
           >
@@ -66,7 +79,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={() => { setActiveIndex(idx); setIsOpen(false); }}
+                onClick={() => setIsOpen(false)}
                 className={`block w-full text-left px-4 py-3 font-roboto-flex text-gray-800 font-medium transition rounded-lg cursor-pointer 
                   ${activeIndex === idx ? 'bg-blue-100 text-blue-600' : 'hover:bg-gray-100 hover:text-brand-orange'}`}
               >

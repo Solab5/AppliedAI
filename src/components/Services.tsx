@@ -102,10 +102,10 @@ const Services = () => {
     <section id="services" ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
             OUR SERVICES
           </h2>
-          <p className="text-xl font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto">
             Comprehensive AI/ML solutions designed to deliver{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               real business value
@@ -172,13 +172,13 @@ const Services = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-brand-orange to-brand-blue rounded-2xl p-8 text-white shadow-xl">
-            <h3 className="text-3xl font-oswald font-bold mb-4 uppercase tracking-wide">
+            <h3 className="text-2xl font-oswald font-bold mb-4 uppercase tracking-wide">
               READY TO TRANSFORM YOUR BUSINESS?
             </h3>
-            <p className="font-roboto-flex text-lg mb-6 opacity-90">
+            <p className="font-roboto-flex text-base mb-6 opacity-90">
               Let's discuss how our services can drive real value for your organization.
             </p>
-            <button className="bg-white text-brand-brown font-oswald font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 uppercase tracking-wide">
+            <button className="bg-white text-brand-brown font-oswald font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 uppercase tracking-wide text-sm md:text-base">
               START YOUR AI JOURNEY
             </button>
           </div>

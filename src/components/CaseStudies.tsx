@@ -100,10 +100,10 @@ const CaseStudies = () => {
     <section id="case-studies" ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
             CASE STUDIES
           </h2>
-          <p className="text-xl font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto mb-8">
+          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto mb-8">
             Real-world{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               success stories
@@ -153,7 +153,7 @@ const CaseStudies = () => {
               <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-4 group-hover:text-brand-orange transition-colors uppercase tracking-wide">
                 {study.title}
               </h3>
-              <p className="font-roboto-flex text-brand-brown/70 leading-relaxed mb-6 group-hover:text-brand-brown transition-colors">
+              <p className="font-roboto-flex text-base text-brand-brown/70 leading-relaxed mb-6 group-hover:text-brand-brown transition-colors">
                 {study.summary}
               </p>
               
