@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Filter, TrendingUp, Shield, Zap, Building } from 'lucide-react';
+import { X, TrendingUp, Shield, Building } from 'lucide-react';
 
 const CaseStudies = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
@@ -97,27 +97,23 @@ const CaseStudies = () => {
     : caseStudies.filter(study => study.domain === selectedFilter);
 
   return (
-    <section id="case-studies" ref={sectionRef} className="py-20 bg-white dots-pattern-subtle relative">
+    <section id="case-studies" ref={sectionRef} className="py-16 bg-white dots-pattern-subtle relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-oswald font-bold text-brand-brown mb-4 uppercase tracking-wide">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-oswald font-bold text-brand-brown mb-3 uppercase tracking-wide">
             CASE STUDIES
           </h2>
-          <p className="text-base md:text-lg font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto mb-8">
-            Real-world{' '}
-            <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
-              success stories
-            </span>{' '}
-            demonstrating the impact of our AI/ML solutions.
+          <p className="text-sm md:text-base font-roboto-flex text-brand-brown/80 max-w-3xl mx-auto mb-6">
+            Real-world success stories demonstrating the impact of our AI/ML solutions. We regularly share actionable insights and best practices to help organizations succeed with AI.
           </p>
           
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setSelectedFilter(filter)}
-                className={`px-6 py-3 rounded-full font-oswald font-medium transition-all duration-300 uppercase tracking-wide ${
+                className={`px-4 py-2 rounded-full font-oswald font-medium transition-all duration-300 uppercase tracking-wide text-sm ${
                   selectedFilter === filter
                     ? 'bg-brand-orange text-white shadow-lg transform scale-105'
                     : 'bg-white text-brand-brown hover:bg-brand-blue/10 border border-brand-blue/20'
@@ -129,39 +125,39 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCases.map((study, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredCases.map((study) => (
             <div
               key={study.id}
-              className="case-card opacity-0 transform translate-y-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group border-l-4 border-brand-orange"
+              className="case-card opacity-0 transform translate-y-8 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group border-l-4 border-brand-orange"
               onClick={() => setSelectedCase(study.id)}
             >
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-brand-orange to-brand-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <study.icon className="w-6 h-6 text-white" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-brand-orange to-brand-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <study.icon className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-oswald font-bold text-brand-orange uppercase">
+                  <div className="text-xl font-oswald font-bold text-brand-orange uppercase">
                     {study.metric}
                   </div>
-                  <span className="text-xs font-roboto-condensed font-light text-brand-brown/60 bg-brand-blue/10 px-3 py-1 rounded-full uppercase">
+                  <span className="text-xs font-roboto-condensed font-light text-brand-brown/60 bg-brand-blue/10 px-2 py-1 rounded-full uppercase">
                     {study.domain}
                   </span>
                 </div>
               </div>
               
-              <h3 className="text-xl font-oswald font-semibold text-brand-brown mb-4 group-hover:text-brand-orange transition-colors uppercase tracking-wide">
+              <h3 className="text-lg font-oswald font-semibold text-brand-brown mb-3 group-hover:text-brand-orange transition-colors uppercase tracking-wide">
                 {study.title}
               </h3>
-              <p className="font-roboto-flex text-base text-brand-brown/70 leading-relaxed mb-6 group-hover:text-brand-brown transition-colors">
+              <p className="font-roboto-flex text-sm text-brand-brown/70 leading-relaxed mb-4 group-hover:text-brand-brown transition-colors">
                 {study.summary}
               </p>
               
               <div className="flex items-center justify-between">
-                <div className="text-sm font-roboto-condensed font-light text-brand-brown/60 uppercase">
+                <div className="text-xs font-roboto-condensed font-light text-brand-brown/60 uppercase">
                   Value: <span className="text-brand-orange font-semibold">{study.value}</span>
                 </div>
-                <button className="text-brand-orange font-oswald font-medium hover:text-brand-blue transition-colors uppercase tracking-wide">
+                <button className="text-brand-orange font-oswald font-medium hover:text-brand-blue transition-colors uppercase tracking-wide text-xs">
                   READ FULL CASE →
                 </button>
               </div>
@@ -174,44 +170,44 @@ const CaseStudies = () => {
       {selectedCase && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-8">
+            <div className="p-6">
               {(() => {
                 const study = caseStudies.find(s => s.id === selectedCase);
                 if (!study) return null;
                 
                 return (
                   <>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-brand-orange to-brand-blue rounded-lg flex items-center justify-center">
-                          <study.icon className="w-6 h-6 text-white" />
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-r from-brand-orange to-brand-blue rounded-lg flex items-center justify-center">
+                          <study.icon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-oswald font-bold text-brand-brown uppercase tracking-wide">{study.title}</h3>
-                          <span className="font-roboto-condensed text-brand-brown/60 uppercase">{study.domain}</span>
+                          <h3 className="text-xl font-oswald font-bold text-brand-brown uppercase tracking-wide">{study.title}</h3>
+                          <span className="font-roboto-condensed text-brand-brown/60 uppercase text-sm">{study.domain}</span>
                         </div>
                       </div>
                       <button
                         onClick={() => setSelectedCase(null)}
                         className="text-brand-brown/60 hover:text-brand-brown transition-colors"
                       >
-                        <X size={24} />
+                        <X size={20} />
                       </button>
                     </div>
                     
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                       <div>
-                        <h4 className="text-lg font-oswald font-semibold text-brand-brown mb-3 uppercase tracking-wide">CHALLENGE</h4>
+                        <h4 className="text-base font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide">CHALLENGE</h4>
                         <p className="font-roboto-flex text-brand-brown/80 leading-relaxed">{study.challenge}</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-lg font-oswald font-semibold text-brand-brown mb-3 uppercase tracking-wide">SOLUTION</h4>
+                        <h4 className="text-base font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide">SOLUTION</h4>
                         <p className="font-roboto-flex text-brand-brown/80 leading-relaxed">{study.solution}</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-lg font-oswald font-semibold text-brand-brown mb-3 uppercase tracking-wide">KEY OUTCOMES</h4>
+                        <h4 className="text-base font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide">KEY OUTCOMES</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {study.outcomes.map((outcome, index) => (
                             <div key={index} className="flex items-center gap-3">
@@ -224,7 +220,7 @@ const CaseStudies = () => {
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                          <h4 className="text-lg font-oswald font-semibold text-brand-brown mb-3 uppercase tracking-wide">TECHNOLOGIES USED</h4>
+                          <h4 className="text-base font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide">TECHNOLOGIES USED</h4>
                           <div className="flex flex-wrap gap-2">
                             {study.technologies.map((tech, index) => (
                               <span key={index} className="bg-brand-blue/10 text-brand-brown font-roboto-condensed px-3 py-1 rounded-full text-sm">
@@ -235,7 +231,7 @@ const CaseStudies = () => {
                         </div>
                         
                         <div>
-                          <h4 className="text-lg font-oswald font-semibold text-brand-brown mb-3 uppercase tracking-wide">TIMELINE</h4>
+                          <h4 className="text-base font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide">TIMELINE</h4>
                           <p className="font-roboto-flex text-brand-brown/80">{study.timeline}</p>
                         </div>
                       </div>

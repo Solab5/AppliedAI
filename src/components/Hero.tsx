@@ -42,16 +42,16 @@ const Hero = () => {
 
       {/* Floating Animation Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-orange/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-20 w-48 h-48 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-brand-orange/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-8 md:mt-0">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-oswald font-bold text-white mb-4 md:mb-6 leading-tight opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.2s_forwards] uppercase tracking-wide">
-          APPLIED AI/ML THAT WORKS IN{' '}
-          <span className="text-brand-orange relative block mt-1 md:mt-2">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mt-8 md:mt-0">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-oswald font-bold text-white mb-3 md:mb-4 leading-tight opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.2s_forwards] uppercase tracking-wide">
+          APPLIED AI/ML THAT DELIVERS BUSINESS OUTCOMES IN
+          <span className="text-brand-orange relative block mt-1">
             <span className="typewriter-container">
               {typewriterText}
               <span className="typewriter-cursor text-brand-blue">|</span>
@@ -59,53 +59,49 @@ const Hero = () => {
           </span>
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl font-roboto-flex text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.4s_forwards] px-2">
-          We deliver{' '}
-          <span className="text-brand-blue font-semibold hover:text-brand-orange transition-colors cursor-default">
-            results-driven AI solutions
-          </span>{' '}
-          that integrate into your workflow—not just models.
+        <p className="text-sm sm:text-base md:text-lg font-roboto-flex text-gray-300 mb-4 md:mb-6 max-w-2xl mx-auto opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.4s_forwards] px-2">
+          We help organizations solve their most pressing AI challenges—reducing costly errors, accelerating adoption, and driving measurable business value. If you're losing customers to unreliable AI or struggling to scale, we deliver outcomes, not just models.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.6s_forwards] px-4">
-          <button className="group bg-brand-orange hover:bg-brand-orange/90 text-brand-brown font-oswald font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/25 flex items-center gap-2 relative overflow-hidden uppercase tracking-wide text-sm md:text-base w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center items-center opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.6s_forwards] px-4">
+          <button className="group bg-brand-orange hover:bg-brand-orange/90 text-brand-brown font-oswald font-semibold px-5 md:px-6 py-2.5 md:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/25 flex items-center gap-2 relative overflow-hidden uppercase tracking-wide text-sm w-full sm:w-auto">
             <span className="relative z-10">LET'S TALK</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
             <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
-          <button className="group border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-brand-brown font-oswald font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 relative overflow-hidden uppercase tracking-wide text-sm md:text-base w-full sm:w-auto">
-            <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          <button className="group border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-brand-brown font-oswald font-semibold px-5 md:px-6 py-2.5 md:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 relative overflow-hidden uppercase tracking-wide text-sm w-full sm:w-auto">
+            <PlayCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
             <span className="group-hover:animate-pulse">SEE HOW WE WORK</span>
           </button>
         </div>
 
         {/* Interactive Stats */}
-        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.8s_forwards] px-4">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 opacity-0 transform translate-y-8 animate-[fadeInUp_1s_ease-out_0.8s_forwards] px-4">
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-xl md:text-2xl font-oswald font-bold text-brand-orange mb-1 group-hover:scale-110 transition-transform uppercase">
               <span className="counter" data-target="500">500</span>+
             </div>
-            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">PROJECTS DELIVERED</div>
+            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs">PROJECTS DELIVERED</div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-blue mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-xl md:text-2xl font-oswald font-bold text-brand-blue mb-1 group-hover:scale-110 transition-transform uppercase">
               <span className="counter" data-target="95">95</span>%
             </div>
-            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">SUCCESS RATE</div>
+            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs">SUCCESS RATE</div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-2xl md:text-3xl font-oswald font-bold text-brand-orange mb-2 group-hover:scale-110 transition-transform uppercase">
+            <div className="text-xl md:text-2xl font-oswald font-bold text-brand-orange mb-1 group-hover:scale-110 transition-transform uppercase">
               $<span className="counter" data-target="50">50</span>M+
             </div>
-            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs md:text-sm">VALUE GENERATED</div>
+            <div className="text-gray-300 font-roboto-condensed font-light group-hover:text-white transition-colors uppercase tracking-wide text-xs">VALUE GENERATED</div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hover:border-brand-orange transition-colors cursor-pointer">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
+        <div className="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center hover:border-brand-orange transition-colors cursor-pointer">
+          <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
