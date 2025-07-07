@@ -15,7 +15,13 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Services', 'Approach', 'Case Studies', 'Contact'];
+  const navItems = [
+    { label: 'Services', href: '#services' },
+    { label: 'Approach', href: '#approach' },
+    { label: 'Case Studies', href: '#case-studies' },
+    { label: 'Contact', href: '#contact' },
+    { label: 'Blog', href: '/blog' },
+  ];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 flex justify-between items-center px-4 sm:px-8 py-3 sm:py-4 bg-transparent ${
@@ -31,13 +37,13 @@ const Navigation = () => {
       <div className="hidden md:flex items-center rounded-full border border-gray-200 bg-white shadow-sm px-4 py-2 gap-2">
         {navItems.map((item, idx) => (
           <a
-            key={item}
-            href={`#${item.toLowerCase().replace(' ', '-')}`}
+            key={item.label}
+            href={item.href}
             onClick={() => setActiveIndex(idx)}
             className={`px-5 py-2 font-roboto-flex text-gray-800 font-medium transition rounded-full cursor-pointer 
               ${activeIndex === idx ? 'bg-blue-100 text-blue-600' : 'hover:bg-gray-100 hover:text-brand-orange'}`}
           >
-            {item}
+            {item.label}
           </a>
         ))}
       </div>
@@ -58,13 +64,13 @@ const Navigation = () => {
           <div className="bg-white shadow-lg rounded-xl mt-2 w-full max-w-xs p-3 flex flex-col gap-2 border border-gray-200">
             {navItems.map((item, idx) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                key={item.label}
+                href={item.href}
                 onClick={() => { setActiveIndex(idx); setIsOpen(false); }}
                 className={`block w-full text-left px-4 py-3 font-roboto-flex text-gray-800 font-medium transition rounded-lg cursor-pointer 
                   ${activeIndex === idx ? 'bg-blue-100 text-blue-600' : 'hover:bg-gray-100 hover:text-brand-orange'}`}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
