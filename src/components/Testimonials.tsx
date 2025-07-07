@@ -60,7 +60,7 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl font-oswald font-bold text-white mb-4 uppercase tracking-wide">
             WHAT OUR CLIENTS SAY
           </h2>
-          <p className="text-base md:text-lg font-roboto-flex text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-roboto-flex text-white/80 max-w-3xl mx-auto">
             Trusted by{' '}
             <span className="text-brand-orange font-semibold hover:text-brand-blue transition-colors cursor-default">
               industry leaders
@@ -78,7 +78,7 @@ const Testimonials = () => {
                   className={`w-6 h-6 ${
                     index < testimonials[currentTestimonial].rating
                       ? 'text-brand-orange fill-current'
-                      : 'text-gray-300'
+                      : 'text-brand-brown/30'
                   }`}
                 />
               ))}
@@ -137,7 +137,7 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentTestimonial ? 'bg-brand-orange' : 'bg-gray-600'
+                  index === currentTestimonial ? 'bg-brand-orange' : 'bg-brand-brown/30'
                 }`}
               />
             ))}
@@ -150,19 +150,19 @@ const Testimonials = () => {
             <div className="text-3xl font-oswald font-bold text-brand-orange mb-2 uppercase">
               500+
             </div>
-            <div className="font-roboto-condensed font-light text-gray-300 uppercase tracking-wide">SATISFIED CLIENTS</div>
+            <div className="font-roboto-condensed font-light text-white/80 uppercase tracking-wide">SATISFIED CLIENTS</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-oswald font-bold text-brand-blue mb-2 uppercase">
               4.9/5
             </div>
-            <div className="font-roboto-condensed font-light text-gray-300 uppercase tracking-wide">AVERAGE RATING</div>
+            <div className="font-roboto-condensed font-light text-white/80 uppercase tracking-wide">AVERAGE RATING</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-oswald font-bold text-brand-orange mb-2 uppercase">
               98%
             </div>
-            <div className="font-roboto-condensed font-light text-gray-300 uppercase tracking-wide">WOULD RECOMMEND</div>
+            <div className="font-roboto-condensed font-light text-white/80 uppercase tracking-wide">WOULD RECOMMEND</div>
           </div>
         </div>
       </div>

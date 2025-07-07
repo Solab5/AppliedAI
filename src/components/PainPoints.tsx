@@ -105,10 +105,10 @@ const PainPoints = () => {
                 <div className="w-full max-w-xl mx-auto bg-white border border-gray-100 rounded-xl shadow-sm px-4 py-6 sm:px-6 flex flex-col gap-2 transition-all duration-300 hover:border-brand-orange/60 hover:shadow-lg text-center sm:text-left">
                   <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-3 mb-2">
                     <span className="text-xl font-oswald font-bold text-brand-orange">{point.stat}</span>
-                    <span className="text-xs font-roboto-condensed font-light text-slate-500 uppercase tracking-wide">{point.statLabel}</span>
+                    <span className="text-xs font-roboto-condensed font-light text-brand-brown/60 uppercase tracking-wide">{point.statLabel}</span>
                   </div>
                   <h3 className="text-base font-oswald font-semibold text-brand-brown mb-1 uppercase tracking-wide">{point.title}</h3>
-                  <p className="font-roboto-flex text-sm text-slate-600 leading-relaxed">{point.description}</p>
+                  <p className="font-roboto-flex text-sm text-brand-brown/70 leading-relaxed">{point.description}</p>
                 </div>
               </div>
             ))}

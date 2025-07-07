@@ -39,8 +39,7 @@ const Services = () => {
         'Technology stack recommendations',
         'Implementation timeline and milestones',
         'Risk assessment and mitigation strategies'
-      ],
-      color: 'from-brand-orange to-yellow-500'
+      ]
     },
     {
       icon: Zap,
@@ -52,8 +51,7 @@ const Services = () => {
         'Real-time decision support systems',
         'Anomaly detection and monitoring',
         'Custom AI applications for specific use cases'
-      ],
-      color: 'from-brand-blue to-cyan-500'
+      ]
     },
     {
       icon: Settings,
@@ -65,8 +63,7 @@ const Services = () => {
         'Model monitoring and performance tracking',
         'Data pipeline design and optimization',
         'Cloud architecture and platform selection'
-      ],
-      color: 'from-emerald-500 to-brand-blue'
+      ]
     },
     {
       icon: GraduationCap,
@@ -78,8 +75,7 @@ const Services = () => {
         'Mentorship and knowledge transfer programs',
         'Technical team augmentation',
         'AI governance and best practices training'
-      ],
-      color: 'from-brand-orange to-red-500'
+      ]
     },
     {
       icon: Users2,
@@ -91,8 +87,7 @@ const Services = () => {
         'Cross-functional team coordination',
         'Communication strategy and training',
         'Success metrics and KPI development'
-      ],
-      color: 'from-purple-500 to-brand-blue'
+      ]
     }
   ];
 
@@ -129,7 +124,7 @@ const Services = () => {
                   <h3 className="text-lg font-oswald font-semibold text-brand-brown mb-2 uppercase tracking-wide flex items-center gap-2 justify-center sm:justify-start">
                     {service.title}
                   </h3>
-                  <p className="font-roboto-flex text-sm text-slate-600 leading-relaxed mb-2">{service.summary}</p>
+                  <p className="font-roboto-flex text-sm text-brand-brown/70 leading-relaxed mb-2">{service.summary}</p>
                   {service.details && (
                     <ul className="list-disc list-inside text-xs text-brand-brown/80 mt-2 space-y-1 text-left mx-auto sm:mx-0">
                       {service.details.map((detail, detailIdx) => (

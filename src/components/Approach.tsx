@@ -32,26 +32,22 @@ const Approach = () => {
     {
       icon: Search,
       title: 'DISCOVER HIGH-VALUE OPPORTUNITIES',
-      description: 'We identify AI use cases that align with your business goals and deliver measurable ROI.',
-      color: 'from-brand-orange to-yellow-500'
+      description: 'We identify AI use cases that align with your business goals and deliver measurable ROI.'
     },
     {
       icon: Workflow,
       title: 'EMBED WITH EXISTING WORKFLOWS',
-      description: 'Our solutions integrate seamlessly into your current processes without disruption.',
-      color: 'from-brand-blue to-cyan-500'
+      description: 'Our solutions integrate seamlessly into your current processes without disruption.'
     },
     {
       icon: Shield,
       title: 'BUILD TRUST-FIRST ML SYSTEMS',
-      description: 'Transparent, explainable models that stakeholders can understand and trust.',
-      color: 'from-emerald-500 to-brand-blue'
+      description: 'Transparent, explainable models that stakeholders can understand and trust.'
     },
     {
       icon: TrendingUp,
       title: 'ENSURE LONG-TERM SUCCESS',
-      description: 'We focus on adoption, scaling, and continuous improvement for lasting value.',
-      color: 'from-brand-orange to-red-500'
+      description: 'We focus on adoption, scaling, and continuous improvement for lasting value.'
     }
   ];
 
@@ -83,7 +79,7 @@ const Approach = () => {
               className="approach-step opacity-0 transform translate-y-8 text-center group cursor-pointer"
             >
               <div className="relative mb-8">
-                <div className={`w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-brand-orange to-brand-blue flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                   <step.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-brand-brown/80 backdrop-blur-sm rounded-full flex items-center justify-center text-brand-orange font-oswald font-bold border-2 border-brand-orange">
