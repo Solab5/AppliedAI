@@ -18,10 +18,10 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '#services' },
-    { label: 'Approach', href: '#approach' },
-    { label: 'Case Studies', href: '#case-studies' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Approach', href: '/#approach' },
+    { label: 'Case Studies', href: '/#case-studies' },
+    { label: 'Contact', href: '/#contact' },
     { label: 'Blog', href: '/blog' },
   ];
 
